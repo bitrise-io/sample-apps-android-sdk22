@@ -1,0 +1,40 @@
+---
+format_version: 1.1.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+app:
+  envs:
+  - default_apk_dir: "./app/build/outputs/apk"
+  - default_apk_name: app-debug.apk
+trigger_map:
+- pattern: "*"
+  is_pull_request_allowed: true
+  workflow: primary
+workflows:
+  primary:
+    steps:
+    - git-clone@3.0.0:
+        run_if: .IsCI
+    - script@1.1.0:
+        title: gradlew
+        inputs:
+        - content: |-
+            #!/bin/bash
+
+            set -e
+            set -v
+
+            bash ./gradlew assemble
+    - script@1.1.0:
+        title: gradle assemble & move to DEPLOY dir
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -e
+            set -v
+
+            gradle assemble
+            mv "${default_apk_dir}/${default_apk_name}" "${BITRISE_DEPLOY_DIR}/${default_apk_name}"
+    - bitrise-artifact-deploy@0.9.0:
+        run_if: .IsCI
+        inputs:
+        - is_compress: 'false'
