@@ -19,9 +19,7 @@ workflows:
         inputs:
         - content: |-
             #!/bin/bash
-
-            set -e
-            set -v
+            set -ex
 
             bash ./gradlew assemble
     - script@1.1.0:
@@ -29,8 +27,7 @@ workflows:
         inputs:
         - content: |-
             #!/bin/bash
-            set -e
-            set -v
+            set -ex
 
             gradle assemble
             mv "${default_apk_dir}/${default_apk_name}" "${BITRISE_DEPLOY_DIR}/${default_apk_name}"
