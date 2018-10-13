@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.bitrise_io.sample_apps_android_simple"
         minSdkVersion 15
-        targetSdkVersion 20
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
