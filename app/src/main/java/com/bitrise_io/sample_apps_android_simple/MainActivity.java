@@ -3,7 +3,7 @@ package com.bitrise_io.sample_apps_android_simple;
 import android.content.Context;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     private PopupWindow pw;
 
