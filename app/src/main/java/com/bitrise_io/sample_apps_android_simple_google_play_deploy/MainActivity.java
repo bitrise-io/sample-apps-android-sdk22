@@ -1,4 +1,4 @@
-package com.bitrise_io.sample_apps_android_simple;
+package com.bitrise_io.sample_apps_android_simple_google_play_deploy;
 
 import android.content.Context;
 import android.graphics.Point;
