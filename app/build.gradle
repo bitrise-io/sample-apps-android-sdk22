@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
 
     defaultConfig {
-        applicationId "com.bitrise_io.sample_apps_android_simple"
+        applicationId "com.bitrise_io.sample_apps_android_simple_google_play_deploy"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
@@ -28,5 +28,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.+'
 }
