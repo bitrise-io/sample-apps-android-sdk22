@@ -1,2 +1,3 @@
-# sample-apps-android-sdk22
-Android Sample, requires Android SDK 22
+!DO NOT MERGE!
+
+TESTING OUT PIPELINE TRIGGERS FROM GITHUB
