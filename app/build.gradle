@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    namespace "com.bitrise_io.sample_apps_android_simple_google_play_deploy"
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.bitrise_io.sample_apps_android_simple_google_play_deploy"
         minSdkVersion 17
-        targetSdkVersion 33
+        targetSdk 33
         versionCode 1
         versionName "1.0"
     }
