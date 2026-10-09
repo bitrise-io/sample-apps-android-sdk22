@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.bitrise_io.sample_apps_android_simple_google_play_deploy"
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.bitrise_io.sample_apps_android_simple_google_play_deploy"
         minSdkVersion 17
-        targetSdk 35
+        targetSdk 36
         versionCode 1
         versionName "1.0"
     }
